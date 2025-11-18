@@ -1,2 +1,2 @@
-# krishna-mehta-0.github.io
+# krishna-mehta-code.github.io
 My notes wiki
