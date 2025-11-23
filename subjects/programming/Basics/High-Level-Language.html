@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-Level-Language</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <h2 class="title">High-Level-Language</h2>
+<div class="section">
+  <p class="TOC"> Table of content: </p>
+  <ul>
+    <li><a class="jump" href="#t1">Why high-level languages were created</a></li>
+    <li><a class="jump" href="#t2">Examples Of High Level Languages</a></li>
+    <li><a class="jump" href="#t3">Why High-level code MUST be translated</a></li>
+    <li><a class="jump" href="#t4">Compiling</a></li>
+    <li><a class="jump" href="#t5">Simplified representation of compiling process</a></li>
+    <li><a class="jump" href="#t6">Interpreting</a></li>
+    <li><a class="jump" href="#t7">Simplified representation of interpretation process</a></li>
+    <li><a class="jump" href="#t8">Optional Reading</a></li>
+    <li><a class="jump" href="#t9">The Benefits of High-Level Languages</a></li>
+        
+  </ul>
+</div>
+
+<div class="section">
+
+<h3 id="t1">💡 Why high-level languages were created</h3>
+<p>Low-level languages (machine code + assembly) are:</p>
+<ul>
+  <li>hard to write</li>
+  <li>hard to understand</li>
+  <li>not portable</li>
+  <li>require deep CPU knowledge</li>
+</ul>
+<p>So humans created <b>high-level languages</b> (C, C++, Pascal, Java, JavaScript, Perl...).</p>
+<p>These languages:</p>
+<ul>
+  <li>hide hardware details</li>
+  <li>are easy to read</li>
+  <li>are portable</li>
+  <li>let you write complex programs with fewer lines</li>
+</ul>
+<hr>
+<h3 id="t2">📝 Example Of High Level Languages</h3>
+<p>Machine/assembly version earlier:<br> <code>mov al, 0x61</code></p>
+<p>Same thing in C/C++:</p>
+<pre class="code-box">
+<code>
+a = 97;
+</code>
+</pre>
+<hr>
+<h3 id="t3">🔧 Why High-level code MUST be translated</h3>
+<p>The CPU cannot understand high-level code.<br>
+So before running, it must be turned into machine code.</p>
+<p>Two ways:</p>
+<ol>
+  <li>Compiling</li>
+  <li>Interpreting</li>
+</ol>
+<hr>
+<h3 id="t4">Compiling (C++ works this way)</h3>
+<p>A compiler:</p>
+<ul>
+  <li>reads your high-level code</li>
+  <li>translates it into machine code</li>
+  <li>produces an <b>executable file</b></li>
+</ul>
+<p>You can run the executable directly on hardware without needing the compiler installed.</p>
+<h4>⚙️ Compilers today</h4>
+<ul>
+  <li>Old compilers → slow, basic code</li>
+  <li>Modern compilers → extremely optimized, sometimes even better than humans</li>
+</ul>
+
+<hr>
+<h3 id="t6">📌 Simplified representation of compiling process:</h3>
+
+<img class="diagram" src="https://www.learncpp.com/images/CppTutorial/Chapter0/Compiling-min.png" alt="Compiling Diagram">
+<hr>
+
+<h3 id="t6">Interpreting</h3>
+
+<p>An interpreter:</p>
+<ul>
+  <li>reads the high-level code</li>
+  <li>executes it <b>directly</b>, line by line</li>
+  <li>does <b>NOT</b> produce an executable</li>
+</ul>
+
+<p>Examples: Python, JavaScript (browsers)</p>
+
+<p>Interpreters are:</p>
+<ul>
+  <li>more flexible</li>
+  <li>slower (translation happens every run)</li>
+  <li>must be installed on every machine running the program</li>
+</ul>
+<hr>
+<h3 id="t7">📘 Simplified representation of interpretation process:</h3>
+
+<img class="diagram" src="https://www.learncpp.com/images/CppTutorial/Chapter0/Interpreting-min.png" alt="Interpreting Diagram">
+<hr>
+<p>
+Most high-level languages can be either compiled or interpreted.  
+C, C++, Pascal → compiled  
+Perl, JavaScript → interpreted  
+Java → mixed system  
+</p>
+<hr>
+<h3 id="t5">📘 Optional Reading</h3>
+<p>“Most C++ compilers can also generate assembly code…”</p>
+<p><b>Normally:</b> compiler converts C++ → Machine Code.</p>
+<p>But you can also ask for:</p>
+<p><b>C++ → Assembly → Machine Code</b></p>
+<p><b>Reasons:</b></p>
+<ul>
+  <li><b>See exactly what the CPU instructions look like</b></li>
+  <li><b>Performance tuning</b> (“Is compiler generating efficient instructions?”)</li>
+  <li><b>Assembly is easier to read than raw machine code</b></li>
+</ul>
+<p>Machine code example:<br>
+<code>10110000 01100001</code><br>
+is unreadable.</p>
+<p>Assembly version:<br>
+<code>mov al, 0x61</code><br>
+is readable.</p>
+
+<h3 class="point">🔥 So what's the core idea?</h3>
+<p>A C++ compiler can show the assembly it produced before turning it into machine code.</p>
+<p>This helps with:</p>
+<ul>
+  <li>learning</li>
+  <li>debugging</li>
+  <li>optimization</li>
+  <li>low-level understanding</li>
+</ul>
+<p>Most programmers never need this.<br>
+Advanced coders sometimes check it.</p>
+
+</div>
+
+
+<div class="section">
+  <h3 id="t9">The Benefits of High-Level Languages</h3>
+
+  <h3 class="point">1️⃣ High-level = High abstraction</h3>
+  <p>High-level languages hide the hardware details.</p>
+
+  <p>Example:</p>
+  <div class="code-box">
+    <pre><code class="language-cpp">a = 97;</code></pre>
+  </div>
+
+  <p>You don’t need to know:</p>
+  <ul>
+    <li>which register to use</li>
+    <li>where memory is</li>
+    <li>which machine instruction stores 97</li>
+  </ul>
+
+  <p>The <strong>compiler</strong> handles all that.</p>
+  <p>Nothing in <code>a = 97;</code> is tied to any CPU architecture — it’s platform-independent.</p>
+
+  <h3 class="point">2️⃣ High-level = Portable</h3>
+  <p>You can write <strong>one C++ program</strong>, and as long as the platform has a C++ compiler, it can be compiled there.</p>
+
+  <p>That’s why high-level programs can be:</p>
+  <ul>
+    <li>portable</li>
+    <li>cross-platform - designed to run on multiple platforms</li>
+  </ul>
+
+  <h3 class="point">3️⃣ High-level = Easier to read, write, and learn</h3>
+  <p>The instructions look similar to:</p>
+  <ul>
+    <li>math</li>
+    <li>English-like expressions</li>
+  </ul>
+
+  <p>Example:</p>
+  <div class="code-box">
+    <pre><code class="language-cpp">a = b * 2 + 5;</code></pre>
+  </div>
+
+  <p>In assembly, the same line needs <strong>4 to 6 separate instructions</strong>.</p>
+
+  <p>High-level languages:</p>
+  <ul>
+    <li>use fewer lines</li>
+    <li>are more concise</li>
+    <li>easier to understand</li>
+  </ul>
+
+  <h3 class="point">4️⃣ High-level languages offer more built-in capabilities</h3>
+  <p>They simplify common tasks like:</p>
+  <ul>
+    <li>requesting memory</li>
+    <li>searching text</li>
+    <li>string manipulation</li>
+    <li>working with complex data structures</li>
+  </ul>
+
+  <p>Example:<br>
+  To check if <code>"abc"</code> exists inside a big block of text:<br>
+  In high-level languages → <strong>1 instruction</strong><br>
+  In low-level languages → many steps, loops, and checks.</p>
+
+  <p>This reduces:</p>
+  <ul>
+    <li>complexity</li>
+    <li>development time</li>
+    <li>programmer effort</li>
+  </ul>
+</div>
+
+<div class="nav-buttons">
+  <a href="Low-Level-Language.html" class="nav prev">← Previous</a>
+  <a href="Index.html" class="nav index">↑ Index</a>
+  <a href="RWBP.html" class="nav next">Next →</a>
+</div>
+
+</body>
+</html>
