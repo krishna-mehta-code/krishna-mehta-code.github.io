@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assembly Language</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <h2 class="title">Assembly Language</h2>
+<div class="section">
+  <p class="TOC"> Table of content: </p>
+  <ul>
+    <li><a class="jump" href="#t1">Why Assembly Exists</a></li>
+    <li><a class="jump" href="#t2">What is Assembly Language?</a></li>
+    <li><a class="jump" href="#t3">Why Assembly is Easier</a></li>
+    <li><a class="jump" href="#t4">Example of assembly</a></li>
+    <li><a class="jump" href="#t5">Why all CPUs still can’t run Assembly</a></li>
+    <li><a class="jump" href="#t6">CPU Families & Their Own Assembl</a></li>
+    <li><a class="jump" href="#t7">Final One-line Summary</a></li>
+  </ul>
+</div>
+ 
+<div class="section">
+    
+    <h3 id="t1">🖥️ Why Assembly Exists</32>
+
+    <p>Machine language (like <code>10110000 01100001</code>) is perfect for the <strong>CPU</strong>, but horrible for <strong>humans</strong> to read or write.</p>
+
+    <p>Since humans write programs, we needed something easier.  
+    That’s where <strong>assembly language</strong> comes in.</p>
+
+    <hr>
+
+    <h3 id="t2">🧩 What is Assembly Language?</h3>
+
+    <p><strong>Assembly = a human-readable version of machine language.</strong></p>
+
+    <p>Every assembly instruction corresponds directly to a machine instruction.</p>
+
+    <p><strong>Binary machine code:</strong></p>
+
+    <div class="code-box">10110000 01100001</div>
+
+    <p><strong>Same thing in x86 assembly:</strong></p>
+
+    <div class="code-box">mov al, 0x61</div>
+
+    <p>Much easier to read, right?</p>
+
+    <hr>
+
+    <h3 id="t3">📦 Why Assembly is Easier</h3>
+
+    <h3 class="point">1️⃣ Easy-to-understand operation names</h3>
+    <ul>
+        <li>Assembly uses <strong>mnemonics</strong> instead of random 1s and 0s.</li>
+        <li>Example: <code>mov</code> = “move data”.</li>
+    </ul>
+
+    <h3 class="point">2️⃣ Registers have names</h3>
+    <ul>
+        <li>The CPU has small fast memory units called <strong>registers</strong>.</li>
+        <li>In x86, one register is named <strong>al</strong>.</li>
+    </ul>
+
+    <h3 class="point">3️⃣ Numbers are written normally</h3>
+    <ul>
+        <li>Decimal → <code>97</code></li>
+        <li>Hexadecimal → <code>0x61</code> (close to binary but easier)</li>
+    </ul>
+
+    <h3 id="t4">📌 Example of assembly</h3>
+
+    <p><strong>Instruction:</strong></p>
+    <div class="code-box">mov al, 0x61</div>
+
+    <p><strong>Meaning:</strong></p>
+    <ul>
+        <li>Copy the number <strong>0x61</strong> into the register <strong>al</strong>.</li>
+    </ul>
+
+    <p>This performs the same action as the earlier binary instruction.</p>
+
+    <hr>
+
+    <h3 id="t5">🛑 Why all CPUs still can’t run Assembly</h3>
+
+    <p>Even though assembly is readable, CPUs only run <strong>machine code</strong>.</p>
+
+    <p>So assembly must be <strong>translated</strong> into machine language using an <strong>assembler</strong>.</p>
+
+    <p>The assembler converts each assembly instruction into its corresponding binary instruction.  
+    Since assembly mirrors machine code, this translation is straightforward.</p>
+
+    <hr>
+
+    <h3 id="t6">🧬 CPU Families & Their Own Assembly</h3>
+
+    <p>Just like machine languages differ, <strong>every CPU family has its own assembly language</strong>.</p>
+
+    <ul>
+        <li>x86 CPUs → x86 assembly</li>
+        <li>ARM CPUs → ARM assembly</li>
+        <li>RISC-V → RISC-V assembly</li>
+    </ul>
+
+    <p>They may look similar, but:</p>
+
+    <ul>
+        <li>syntax differs</li>
+        <li>instructions differ</li>
+        <li>register names differ</li>
+    </ul>
+
+    <p><strong>A program in one assembly language cannot run on another CPU family.</strong></p>
+
+    <hr>
+
+    <h3 id="t7">⭐ Final One-line Summary</h3>
+
+    <p><strong>Assembly = human-friendly machine language, but still unique to each CPU family and needs an assembler to convert it into machine code.</strong></p>
+
+</div>
+
+<div class="nav-buttons">
+  <a href="Machine-Language.html" class="nav prev">← Previous</a>
+  <a href="Index.html" class="nav index">↑ Index</a>
+  <a href="Executable-File.html" class="nav next">Next →</a>
+</div>
+
+</body>
+</html>
